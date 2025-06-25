@@ -31,7 +31,7 @@ public class DummyController {
     }
 
     @PostMapping("")
-    public ResponseEntity<DummyDto> createDummy() {
+    public ResponseEntity<DummyDto> createDummy(@RequestBody DummyDto dto) {
         Dummy dummy = dummyService.createDummy(null);//le debo pasar dummy por ahora null
         return null;
     }
